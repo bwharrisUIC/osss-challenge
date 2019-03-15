@@ -25,10 +25,10 @@ The Contact Us page must include a form that can successfully POST to [https://a
 To submit your work, create a ZIP of your work and submit it to aes_webmaster@uic.edu. All work must be submitted by **11:59:59pm** on March 24th, 2019 for fullest consideration. If you experience any difficulty, please send an email to [aes_webmaster@uic.edu](aes_webmaster@uic.edu) .
 
 ## Resources
-https://getbootstrap.com/ 
-https://marketing.uic.edu/marketing-toolbox/university-style-guide/ 
-https://red.uic.edu/ 
-https://git-scm.com/ 
-https://fae.disability.illinois.edu/ 
-https://ainspector.github.io/installation.html 
-https://wave.webaim.org/extension/ 
+* https://getbootstrap.com/ 
+* https://marketing.uic.edu/marketing-toolbox/university-style-guide/ 
+* https://red.uic.edu/ 
+* https://git-scm.com/ 
+* https://fae.disability.illinois.edu/ 
+* https://ainspector.github.io/installation.html 
+* https://wave.webaim.org/extension/ 
