@@ -1,7 +1,7 @@
 # OSSS Web Developer Challenge
 
 ## Task
-Create a 3-page website for the UIC Office of Academic and Enrollment Services. The pages should be modern, responsive, and accessible recreations of the pages listed below with additional modifications as specified. Incomplete submissions will be considered, so please do not be deterred if you are unable to complete any section. This challenge must be submitted by 11:59:59pm on March 24th, 2019 for fullest consideration. Note: Don’t forget to review the resource links.
+Create a 3-page website for the UIC Office of Academic and Enrollment Services. The pages should be modern, responsive, and accessible recreations of the pages listed below with additional modifications as specified. Incomplete submissions will be considered, so please do not be deterred if you are unable to complete any section. This challenge must be submitted by 11:59:59pm on March 27th, 2019 for fullest consideration. Note: Don’t forget to review the resource links.
 
 * Home: https://aes.uic.edu/
 * Who We are: https://aes.uic.edu/who_we_are 
@@ -22,7 +22,7 @@ The who we are page must include the slate form embed found in the [README](slat
 The Contact Us page must include a form that can successfully POST to [https://aes.uic.edu/challenge/contact-form-data.php](https://aes.uic.edu/challenge/contact-form-data.php). A copy of the logic (PHP) used by the form processing script can be found in the [php](php/) directory of the repository. The data submitted will be logged to the server and displayed on the page you are POSTing to. **NOTE:** Your form must include a hidden input named `key` which is a assigned the value of the key provided to you in the instruction email.
 
 ## Submitting Work
-To submit your work, create a ZIP of your work and submit it to aes_webmaster@uic.edu. All work must be submitted by **11:59:59pm** on March 24th, 2019 for fullest consideration. If you experience any difficulty, please send an email to [aes_webmaster@uic.edu](aes_webmaster@uic.edu) .
+To submit your work, create a ZIP of your work and submit it to aes_webmaster@uic.edu. All work must be submitted by **11:59:59pm** on March 27th, 2019 for fullest consideration. If you experience any difficulty, please send an email to [aes_webmaster@uic.edu](aes_webmaster@uic.edu) .
 
 ## Resources
 * https://getbootstrap.com/ 
