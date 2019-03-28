@@ -22,7 +22,7 @@ The who we are page must include the slate form embed found in the [README](slat
 The Contact Us page must include a form that can successfully POST to [https://aes.uic.edu/challenge/contact-form-data.php](https://aes.uic.edu/challenge/contact-form-data.php). A copy of the logic (PHP) used by the form processing script can be found in the [php](php/) directory of the repository. The data submitted will be logged to the server and displayed on the page you are POSTing to. **NOTE:** Your form must include a hidden input named `key` which is a assigned the value of the key provided to you in the instruction email.
 
 ##Submitting Work
-To submit your work, please push your changes to the master branch of the repository you cloned from. Submit as many times as needed, but only your last commit will be reviewed.  All work must be submitted by **11:59:59pm** on March 24th, 2019 for fullest consideration. If you experience any difficulty, please send an email to [aes_webmaster@uic.edu](aes_webmaster@uic.edu) .
+To submit your work, create a ZIP of your work and submit it to aes_webmaster@uic.edu. All work must be submitted by **11:59:59pm** on March 24th, 2019 for fullest consideration. If you experience any difficulty, please send an email to [aes_webmaster@uic.edu](aes_webmaster@uic.edu) .
 
 ##Resources
 https://getbootstrap.com/ 

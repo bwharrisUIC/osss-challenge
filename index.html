@@ -1,10 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <title>UIC Vice Provost for Academic &amp; Enrollment Services</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" ></script>
+  <style>
+    body {
+	  font-family: TheinhardtBlack,Gotham,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	  font: 400 18px Lato, sans-serif;
+      line-height: 1.8;
+	  color: #141b4d;
+	}	
+	h1 {
+	  text-transform: uppercase;
+	  font-weight: 700;
+	  color: #ef3340;
+	  padding-bottom: 10px 0 0;
+	  margin-bottom: 30px;
+	}
+	.bg-grey {
+	  background-color: #f6f6f6;
+	}
+	.container-fluid{
+	  padding: 60px 50px;
+	}
+	.logo {
+	  font-size: 200px;
+	}
+	.navbar {
+      margin-bottom: 0;
+      background-color: #141b4d;
+	  z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+	  font-family: Montserrat, sans-serif;
+    }
+    .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #ef3340 !important;
+      background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+    }
+	footer .glyphicon {
+	  font-size: 40px;
+	  margin-bottom: 20px;
+	  color: #141b4d;
+	}
+	.slideanim {visibility:hidden;}
+    .slide {
+      /* The name of the animation */
+      animation-name: slide;
+      -webkit-animation-name: slide; 
+      /* The duration of the animation */
+      animation-duration: 1s; 
+      -webkit-animation-duration: 1s;
+      /* Make the element visible */
+      visibility: visible; 
+    }
+    /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      } 
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      } 
+    }
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      } 
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+	.overlay {
+	  background: rgba(255, 255, 255, .6);
+	}
+	#whoweare .col-sm-4 {
+	  padding-top:4px;
+	}
+	#contact {
+	  background: #ffffff url("assets/aes-default-hero.jpg") no-repeat fixed center bottom;
+	  background-size: 100%;
+	}
+    #slate_form{
+	  margin: 25px 0;
+	  padding: 25px 0;
+	  border: solid 2px #141b4d;
+	  border-radius: 25px;
+	}
+	#slate_form input, 
+	#slate_form select, 
+	#slate_form textarea,
+	#slate_form button {
+	  border: solid 2px #141b4d;
+	  border-radius: 5px;
+	}
+	#contact input,
+	#contact textarea,
+	#contact button {
+	  border: solid 2px #ef3340;
+	  border-radius: 5px;
+	}
+	#contact .glyphicon {
+	  color: #ef3340;
+	}
+	@media screen and (max-width: 768px) {
+	  .col-sm-4 {
+	    text-align: center;
+		margin: 25px 0;
+	  }
+	}
+  </style>
+  <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#pageTop']").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+          });
+        } // End if
+      });
+    })
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+
+        var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+      });
+    });
+    function loadPlaceHolder() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+		  txt = "<button class='btn btn-default' type='button' onclick='removeStatementOfValues()'>Close</button><br/><br/><a href='https://jsonplaceholder.typicode.com/posts' target='_blank'>JSON Placeholder</a><br/><br/>";
+          document.getElementById("ajax").innerHTML = txt + this.responseText;
+        }
+      };
+      xhttp.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+      xhttp.send();
+    }
+	function removeStatementOfValues() {
+	  document.getElementById("ajax").innerHTML = 
+	    "<button class='btn btn-default' type='button' onclick='loadPlaceHolder()'>See More About UIC'S Statement of Values</button>";
+	}
+  </script>
 </head>
-<body>
-<div id="ajax"></div>
+<body id="pageTop" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">
+		<img src="assets/uic_logo.png" alt="UIC logo" style="height:100%"></img>
+	  </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#welcome">WELCOME</a></li>
+        <li><a href="#whoweare">WHO WE ARE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="welcome" class="container-fluid overlay">
+  <div class="row">
+	<div class="col-sm-4">
+	  <img src="assets/ADM.OVPAES.LOCKB.LG.RED.PNG" alt="Office Of The Vice Provost For Academic And Enrollment Services" style="width:100%;" ></img>
+	</div>
+    <div class="col-sm-8">
+	  <h1>Welcome</h1>
+      <p>Thank you for visiting the Office of Academic and Enrollment Services (AES) website. We appreciate your interest in the University of Illinois at Chicago and the work that we do. AES professionals are dedicated to recruiting, admitting, enrolling, and serving diverse, well-qualified classes of students.</p>
+      <p>UIC's institutional statement of values informs the work that we do. It reads,</p>
+      <blockquote>"UIC's vision of a more egalitarian society requires an unstinting commitment to access, providing the broadest range of students…with all the benefits of a great public research university. At UIC the value of access is distinguished by the precept of 'Access to Excellence,' serving as the central guiding principle for higher education at UIC.... It follows then, that, for UIC, excellence is not a goal but a value that informs our every practice. Students must display uncommon excellence, achieved not only through formal academic measures but also through life experiences that give them the passion to succeed at UIC."</blockquote>
+      <p>Like UIC students, we embrace the challenges of higher education and enjoy discovering new ways to meet them. Please <a href="#contact">contact us</a> if we can be of assistance.</p>
+      <p>Sincerely,</p>
+      <p><i>Kevin M. Browne</i><br/>
+        Vice Provost for Academic and Enrollment Services</p>
+	</div>
+  </div>
+  <div class="row" style="margin-top:40px;max-height:400px;overflow:auto;">
+    <div class="container-fluid text-center">
+	  <div id="ajax">
+	    <button class="btn btn-default" type="button" onclick="loadPlaceHolder()">See More About UIC'S Statement of Values</button>
+	  </div>
+	</div>
+  </div>  
+</div>
+
+<div id="whoweare" class="container-fluid text-center bg-grey">
+  <h1>Who We Are</h1><br/>
+  <div class="row">
+    <div class="col-sm-4">
+	  <h3>Kevin Browne</h3>
+	  <p>
+	    Phone:&nbsp;312&#8209;413&#8209;3471<br/>
+	    kbrowne@uic.edu
+	  </p>
+	  <p>Kevin Browne is the <i>Vice Provost for Academic and Enrollment Services</i> at UIC. Kevin works with campus leaders to develop and guide initiatives to enroll students who will thrive in UIC’s rich academic environment and diverse community of scholars. Kevin’s extensive domestic and international enrollment management experience has helped to shepherd the creation of UIC’s first strategic enrollment management plan as well as a comprehensive recruitment strategy.  Kevin provides leadership and direction to a team of professionals with a focus on outreach, recruitment, admissions and retention.</p>
+      <p>The areas of responsibility for the members of the AES Management Team are described below. Please contact any team member directly for information or assistance.</p>
+	</div>
+	<div class="col-sm-4">
+	  <h3>Robert Dixon</h3>
+	  <p>
+	    Phone:&nbsp;312&#8209;413&#8209;1878<br/>
+		robd@uic.edu
+	  </p>
+	  <p>As <i>UIC Registrar</i>, Robert Dixon oversees student registration and records, transfer articulation and degree audit, medical immunization records, and classroom course scheduling.</p>
+	  <p><a href="https://registrar.uic.edu/current_students/index.html">Office of Registration and Records</a></p>
+	</div>
+	<div class="col-sm-4">
+	  <h3>Phillip Beverly</h3>
+	  <p>
+	    Phone:&nbsp;312&#8209;996&#8209;6421<br/>
+		pbeverly@uic.edu
+	  </p>
+	  <p>As <i>Interim Director of the President's Award Program (PAP)</i>, Phillip Beverly coordinates the review process for awarding eligible first year students the university's prestigious President's Scholar Award, and works with PAP students throughout their undergraduate degree programs to ensure that they benefit from the programmatic elements of the award and maintain their eligibility.</p>
+      <p><a href="https://aes.uic.edu/programs/presidents-award-program">President's Award Program</a></p>
+	</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+	  <h3>Mike Kamowski</h3>
+	  <p>
+	    Phone:&nbsp;312&#8209;355&#8209;1201<br/>
+	    mikek@uic.edu
+	  </p>
+	  <p>As <i>Director of the Office of Student Systems Services</i>, Mike Kamowski oversees a team of professionals that support the UIC campus administrative and college units, faculty, and students in their use of UI-Integrate/Banner and related student systems.</p>
+	  <p><a href="https://osss.uic.edu/">Office of Student Systems Services</a></p>
+	</div>
+	<div class="col-sm-4">
+	  <h3>Malinda Lorkovich</h3>
+	  <p>
+	    Phone:&nbsp;312&#8209;996&#8209;4366<br/>
+		mlork@uic.edu
+	  </p>
+	  <p>As <i>Managing Director of Admissions</i>, Malinda Lorkovich leads the first year, transfer, graduate and international admissions units. Under her direction, UIC admissions experts provide information and guidance to tens of thousands applicants yearly, and conduct individual, holistic reviews of applicants to determine admissions eligibility.</p>
+	  <p><a href="https://admissions.uic.edu/undergraduate">Office of Admissions</a></p>
+	</div>
+	<div class="col-sm-4">
+	  <h3>Yolanda Rodriguez</h3>
+	  <p>
+	    Phone:&nbsp;312&#8209;996&#8209;5118<br/>
+		yrodri5@uic.edu
+	  </p>
+	  <p>As <i>Interim Director of Operations</i>, Yolanda Rodriguez oversees the team responsible for AES human resources, payroll, budget development, purchasing, facility planning and management and special events. </p>
+	</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+	  <h3>Oscar Rodriguez</h3>
+	  <p>
+	    Phone:&nbsp;312&#8209;996&#8209;7928<br/>
+	    axarodr@uic.edu
+	  </p>
+	  <p>As <i>Director of Recruitment and Outreach</i>, Oscar Rodriguez provides leadership to the campus' outreach efforts, overseeing a team of recruiters who travel locally, nationally and internationally to share information about UIC with prospective students. The unit hosts thousands of visitors on campus each year during Daily Tours and Information Sessions, Campus Preview Days, and the Annual Fall Open House. </p>
+	</div>
+	<div class="col-sm-4">
+	  <h3>Hugo Teruel</h3>
+	  <p>
+	    Phone:&nbsp;312&#8209;996&#8209;3356<br/>
+		hugot@uic.edu
+	  </p>
+	  <p>As <i>Director of the Latin American Recruitment and Educational Services (LARES)</i> program, Hugo Teruel leads a team of professionals committed to the recruitment, academic support and success of Latino students. </p>
+	</div>
+  </div>
+  <div id="slate_form" class="row overlay">
+    <div id="form_c85d3195-2069-413f-b430-c1a4c232de98">Loading...</div>
+    <script async="async" src="https://applynow.uic.edu/register/?id=c85d3195-2069-413f-b430-c1a4c232de98&amp;output=embed&amp;div=form_c85d3195-2069-413f-b430-c1a4c232de98">/**/</script>	 
+  </div>  
+</div>
+
+<div id="contact" class="container-fluid">
+  <div class="row overlay">
+    <h1 class="text-center">Contact Us</h1>
+    <br/><br/>
+    <form action="https://aes.uic.edu/challenge/contact-form-data.php" method="post">
+      <div class="col-sm-5">
+	    <p><span class="glyphicon glyphicon-map-marker"></span>&nbsp;Academic and Enrollment Services (MC 103)<br/>
+	      University of Illinois at Chicago<br/>
+		  601 South Morgan Street, 2706 UH<br/>
+		  Chicago, IL 60607</p>
+	    <p><span class="glyphicon glyphicon-phone"></span>&nbsp;(312)&nbsp;413&#8209;3471</p>
+	    <p><span class="glyphicon glyphicon-envelope"></span>&nbsp;vpaes@uic.edu</p>	  
+	  </div>
+	  <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="first_name" name="first_name" placeholder="First Name" type="text" required>
+          </div>
+		  <div class="col-sm-6 form-group">
+            <input class="form-control" id="last_name" name="last_name" placeholder="Last Name" type="text" required>
+          </div>
+        </div>
+	    <div>
+          <div class="form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+	    </div>
+        <textarea class="form-control" id="message" name="message" placeholder="Message" rows="15"></textarea><br>
+        <input id="key" name="key" value="fd1a5b85-b7cc-5f5a-98a2-626cf9d5083f" type="hidden">
+	    <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div> 
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#pageTop" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up" ></span>
+  </a>
+  <br/>
+  <img src="assets/UICFullSideways-textonly_black.jpg" alt="UIC" style="height:450px"></img>
+</footer>
 </body>
 </html>
